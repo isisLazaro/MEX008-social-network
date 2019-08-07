@@ -1,7 +1,9 @@
 let Home = {
     render : async () => {
         let view = /* html */ `
-            <h1>HOLA</h1>
+            <figure id = "main-hero">
+                <h2>HOLA</h2>
+            </figure>
         `
         return view
     },
