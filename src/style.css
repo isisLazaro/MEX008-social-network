@@ -11,12 +11,18 @@
     padding: 1vh 2.5%;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
-    justify-content: space-around;
+    /* justify-: center; */
+    justify-content: space-between;
 }
 
 #navbar #logo {
     width: 10vh;
+}
+
+#navbar-cuenta {
+    /* display: block; */
+    background: green;
+    justify-content: space-between;
 }
 
 .btn-start {
