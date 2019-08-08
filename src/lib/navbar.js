@@ -1,10 +1,14 @@
 let Navbar = {    
     render : async () => { 
         let view = /*html*/`
-            <nav>
-                <a href = "./#/">TOGETHER-CLICK</a><br>
-                <a href = "./#/register"> Crea tu cuenta</a>
-                <a href = "./#/login">Incia sesión</a>
+            <nav id = "navbar-dsk" class = "navbar">
+                <a href = "./#/"><img src = "imgs/Logo-color.png" id = "logo"></a><br>
+                <a href = "./#/login" class = "linksToJoin" >Incia sesión</a>
+                <a href = "./#/register" class = "linksToJoin"> Crea tu cuenta</a>
+            </nav>
+            <!--  mobile version -->
+            <nav id = "navbar-mbl" class = "navbar">
+                <a href = "./#/"><img src = "imgs/Logo-color.png" id = "logo"></a><br>
             </nav>
         `
         return view
