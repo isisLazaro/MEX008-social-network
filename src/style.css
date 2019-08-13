@@ -7,9 +7,9 @@
 
 /* NAVBAR */
 .navbar {
-    height: 12vh;
+    height: 9vh;
     width: 100vw;
-    background: #bcbabf; 
+    background: transparent; 
     font-size: 1.5em;
     padding: 1vh 2.5%;
     display: flex;
@@ -27,7 +27,7 @@
 }
 
 #logo {
-    width: 45vh;
+    width: 25vh;
 }
 
 /* Login & Register */
@@ -36,8 +36,8 @@
     text-decoration: none;
     /* padding: .25rem .5rem; */
     padding: 0.5%;
-    font-family: 'Kalam', cursive;
-    font-size: 1.5em;
+    font-family: 'Lobster', cursive;
+    font-size: .8em;
 }
 
 .linksToJoin:hover {
@@ -45,13 +45,13 @@
 }
 
 #btn-login {
-    color: #991b1e;
+    color: white;
 }
 
-#btn-register {
+/* #btn-register {
     background: #991b1e;
     color: #bcbabf;
-}
+} */
 
 /* HOME */
 .page-background {
@@ -60,6 +60,7 @@
     background: url(img/wedding-gay.jpg);
     background-size: cover;
     background-position: top;
+    margin: 0%;
 }
 
 .main-home {
@@ -169,5 +170,37 @@
         width: 60vh;
         font-size: 1.2rem;
     }
+}
 
+
+@media (max-width: 768px){
+    
+        /* NAVBAR MATERIALIZE */
+        
+        nav{
+            background-color: #4db6ac !important;
+            height: 9.5vh !important;
+        }
+        
+        .size-li{
+            width: 30vh !important;
+            text-align: center !important;
+        }
+        
+
+}
+
+@media (max-width: 1560px){
+     /* NAVBAR MATERIALIZE */
+        
+     nav{
+        background-color: #4db6ac !important;
+        height: 9.5vh !important;
+    }
+    
+    .size-li{
+        width: 30vh !important;
+        text-align: center !important;
+    }
+    
 }
