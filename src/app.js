@@ -7,6 +7,7 @@ import Login     from './lib/login.js'
 import LoginR    from './lib/loginR.js'
 import Register  from './lib/register.js'
 import Test from './lib/test.js'
+import Muro from './lib/muro.js'
 import Error404  from './lib/error.js'
 
 import Utils from './lib/utils.js'
@@ -19,6 +20,7 @@ const routes = {
     ,'/loginR'    : LoginR
     ,'/register' : Register
     ,'/test' : Test
+    ,'/muro' : Muro
 };
 
 // Router takes a URL, checks against the list of supported routes and then renders the corresponding content page
