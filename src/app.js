@@ -4,9 +4,7 @@ import Navbar from './lib/navbar.js'
 
 import Home     from './lib/home.js'
 import Login    from './lib/login.js'
-import LoginR   from './lib/loginR.js'
 import Register from './lib/register.js'
-import Test     from './lib/test.js'
 import Error404 from './lib/error.js'
 import Inicio from './lib/inicio.js'
 
@@ -17,9 +15,7 @@ import Utils from './lib/utils.js'
 const routes = {
     '/'          : Home
     ,'/login'    : Login
-    ,'/loginr'   : LoginR
     ,'/register' : Register
-    ,'/test'     : Test
     ,'/inicio'   : Inicio
 };
 
