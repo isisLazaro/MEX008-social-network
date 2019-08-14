@@ -40,17 +40,9 @@ let Login = {
         if (!ui) {
         ui = new firebaseui.auth.AuthUI(firebase.auth());
         }
-        ui.start('#firebaseui-auth-container', uiConfig, {
-            signInOptions: [
-              {
-                provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
-                requireDisplayName: false
-              }
-            ]
-          });   
-
-
+        ui.start('#firebaseui-auth-container', uiConfig);
     }
+
 }
 
 export default Login;

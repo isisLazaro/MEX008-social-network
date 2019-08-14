@@ -218,6 +218,7 @@
     .size-li{
         width: 30vh !important;
         text-align: center !important;
+        text-decoration: none;
     }
     
 }
