@@ -9,7 +9,7 @@
 .navbar {
     height: 9vh;
     width: 100vw;
-    background: transparent; 
+    background: transparent;
     font-size: 1.5em;
     padding: 1vh 2.5%;
     display: flex;
@@ -38,6 +38,11 @@
     padding: 0.5%;
     font-family: 'Lobster', cursive !important;
     font-size: .8em;
+    background-color:#004d40;
+    padding: 5%;
+    padding-left: 15%;
+    padding-right: 15%;
+    border-radius: 5px;
 }
 
 /* .linksToJoin:hover {
@@ -128,6 +133,17 @@
 
 /* desktop version */
 @media (min-width: 600px){
+    /* Login & Register buttons*/
+    .linksToJoin {
+        /* border: 1px solid white; */
+        text-decoration: none;
+        /* padding: .25rem .5rem; */
+        padding: 0.5%;
+        font-family: 'Lobster', cursive !important;
+        font-size: .8em;
+        background-color: transparent;
+    }
+
     /* NAVBAR */
     #navbar-dsk {
         display: flex;
@@ -176,7 +192,7 @@
 }
 
 
-@media (max-width: 425px){
+@media (max-width: 768px){
     
         /* NAVBAR MATERIALIZE */
         
