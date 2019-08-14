@@ -14,7 +14,8 @@ let Login = {
 
         // FirebaseUI config.
         let uiConfig = {
-            signInSuccessUrl: 'loggedin.html',
+            // signInSuccessUrl: 'loggedin.html',
+            signInSuccessUrl: '#/inicio',
             signInOptions: [
             // Leave the lines as is for the providers you want to offer your users.
             firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -26,7 +27,7 @@ let Login = {
             // Terms of service url/callback.
             //tosUrl: '<your-tos-url>',
             // Privacy policy url/callback.
-            /* privacyPolicyUrl: function() {
+            /* privacyPolicyUrl: function() {   
             window.location.assign('<your-privacy-policy-url>');
             } */
         };
@@ -39,7 +40,14 @@ let Login = {
         if (!ui) {
         ui = new firebaseui.auth.AuthUI(firebase.auth());
         }
-        ui.start('#firebaseui-auth-container', uiConfig);
+        ui.start('#firebaseui-auth-container', uiConfig, {
+            signInOptions: [
+              {
+                provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+                requireDisplayName: false
+              }
+            ]
+          });   
 
 
     }
