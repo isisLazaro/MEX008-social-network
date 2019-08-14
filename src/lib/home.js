@@ -4,7 +4,7 @@ let Home = {
             <section id = "home">
                 <figure id = "home-background" class = "page-background"></figure>
                 <main id = "main-home-mbl" class = "main-home"> 
-                    <h1>El espacio incluyente donde toda la comunidad de bodas se conecta.</h1><br>
+                    <h4>El espacio incluyente donde toda la comunidad de bodas se conecta.</h4><br>
                     <a href = "./#/login" id = "btn-login" class = "linksToJoin" >Inicia sesión</a><br><br>
                     <a href = "./#/register" id = btn-register class = "linksToJoin"> Crea tu cuenta</a>
                 </main>

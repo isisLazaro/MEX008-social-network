@@ -40,18 +40,17 @@
     font-size: .8em;
 }
 
-.linksToJoin:hover {
+/* .linksToJoin:hover {
     text-decoration:underline;
-}
+} */
 
 #btn-login {
     color: white;
 }
 
-/* #btn-register {
-    background: #991b1e;
-    color: #bcbabf;
-} */
+#btn-register {
+    color: white;
+}
 
 /* HOME */
 .page-background {
@@ -65,16 +64,18 @@
 
 .main-home {
     padding: 2rem;
-    background: rgba(188, 186, 191, 0.65);
-    color: #991b1e;
+    background: #b2dfdb;
+    color: #4db6ac;
+    text-align: center;
 }
 
-.main-home h1 {
-    font-family: 'Ma Shan Zheng', cursive;
+.main-home  {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #26a69a;
 }
 
 .main-home p {
-    font-family: 'Kalam', cursive;
+    font-family: 'Lobster', cursive !important;
 }
 #main-home-mbl {
     width: 60vw;
@@ -83,6 +84,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: rgba(	178, 223, 219, 0.85);
     /* text-align: center; */
 }
 
@@ -155,6 +157,7 @@
     }
 
     #main-home-dsk h1 {
+        padding-top: 15%;
         font-size: 2.6rem;
     }
 
@@ -173,7 +176,7 @@
 }
 
 
-@media (max-width: 768px){
+@media (max-width: 425px){
     
         /* NAVBAR MATERIALIZE */
         
@@ -185,9 +188,7 @@
         .size-li{
             width: 30vh !important;
             text-align: center !important;
-        }
-        
-
+        }    
 }
 
 @media (max-width: 1560px){
