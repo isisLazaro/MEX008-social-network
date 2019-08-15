@@ -4,14 +4,14 @@ let Inicio = {
         let view =  /*html*/`
             <p>BIENVENIDO</p>
             <button id="btnLogOut" type="button">cerrar sesión</button>
-        `
+
+            `
         return view
     }
     , after_render: async () => {
+        //  **********        LOGOUT       ************
         const btnLogOut = document.getElementById("btnLogOut");
-
         const logOut = () => firebase.auth().signOut();
-
         const logOutOnClick = (evt) => {
             evt.preventDefault();
             if (firebase.auth().currentUser) {
@@ -23,9 +23,7 @@ let Inicio = {
             } else {
             location.hash = '/';
             }
-        
         };
-
         btnLogOut.addEventListener('click', logOutOnClick);
     }
 }
