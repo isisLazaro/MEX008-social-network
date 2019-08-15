@@ -57,6 +57,12 @@
     color: white;
 }
 
+h1{
+    color:#004d40;
+    font-family: 'Lobster', cursive;
+    font-size: 3rem;
+}
+
 /* HOME */
 .page-background {
     height: 88vh;
@@ -131,6 +137,67 @@
     font-size: 1.2rem;
 }
 
+/* inicio publicaciones*/
+i{
+    margin: 1rem;
+    justify-content: space-between;
+}
+
+i .fas, .fa-user-circle, .fa-heart, .fa-shopping-cart, .fa-user-friends, .fa-search, .fa-comment{
+   color: #4db6ac;
+}
+ 
+.row{
+     margin-bottom: 0 !important;
+}
+
+.menu{
+     display: flex;
+     text-align: center;
+     align-items: center;
+     justify-content: space-around; 
+}
+ 
+.container-post{
+    background-color:  #b2dfdb;
+    display: grid;
+}
+
+.title{
+    display: flex;
+    text-align: left;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-head{
+    background-color: inherit;
+    border-top: 1px solid rgba(160,160,160,0.2);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    position: relative;
+}
+
+.card-footer {
+    background-color: inherit;
+    border-top: 1px solid rgba(160,160,160,0.2);
+    position: relative;
+}
+
+.btn-post {
+    padding: 0.5%;
+    font-family: 'Lobster', cursive !important;
+    font-size: 1em;
+    background-color: #004d40;
+    color: white;
+    padding: 4%;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-radius: 5px;
+    margin-bottom: 4%;
+}
+
 /* desktop version */
 @media (min-width: 600px){
     /* Login & Register buttons*/
@@ -188,6 +255,17 @@
     .form-inputs {
         width: 60vh;
         font-size: 1.2rem;
+    }
+
+    /*inicio publicaciones*/
+    .container-post{
+        background-color:  #b2dfdb;
+        display: flex;
+        justify-content: center;
+    }
+    .row{
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
