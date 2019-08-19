@@ -204,6 +204,10 @@ i .fas, .fa-user-circle, .fa-heart, .fa-shopping-cart, .fa-user-friends, .fa-sea
     margin-bottom: 4%;
 }
 
+#infoUserHome h1{
+    font-size: 2.8rem;
+}
+
 /* desktop version */
 @media (min-width: 600px){
     /* Login & Register buttons*/
