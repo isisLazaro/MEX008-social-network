@@ -157,3 +157,7 @@ El prototipo de alta fidelidad se diseñó en AdobeXD
 [¿Cuánto gastan los mexicanos en su boda?](https://blog.sweetring.com/article/boda-mexicanos/)
 
 [¿Cuánto cuesta una boda en México?](https://www.dineroenimagen.com/actualidad/cuanto-cuesta-una-boda-en-mexico/110269#view-1)
+
+## Links
+
+[presentación](https://docs.google.com/presentation/d/1jTnWcAn2QUi3peolZSVHEzJUHNWZEqQMqkqp8L7IGpI/edit?usp=sharing)
