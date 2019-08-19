@@ -7,6 +7,7 @@ import Login    from './lib/login.js'
 import Register from './lib/register.js'
 import Error404 from './lib/error.js'
 import Inicio from './lib/inicio.js'
+import UserHome from './lib/userHome.js'
 
 import Utils from './lib/utils.js'
 
@@ -17,6 +18,7 @@ const routes = {
     ,'/login'    : Login
     ,'/register' : Register
     ,'/inicio'   : Inicio
+    ,'/userhome' : UserHome
 };
 
 // Router takes a URL, checks against the list of supported routes and then renders the corresponding content page
