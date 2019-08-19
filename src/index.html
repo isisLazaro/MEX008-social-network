@@ -26,11 +26,11 @@
 
     <!-- Initialization snippet for the firebase project -->
     <!-- <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase.js"></script> -->
-    <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-auth.js"></script>
     <!-- Initialization sign-in widget from firebaseUI web-->
     <!-- <script src="https://cdn.firebase.com/libs/firebaseui/4.1.0/firebaseui.js"></script> -->
-    <script src="https://www.gstatic.com/firebasejs/ui/4.1.0/firebase-ui-auth__es.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.1.0/firebase-ui-auth__es_419.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-firestore.js"></script>
 
     <script>
@@ -44,7 +44,69 @@
             messagingSenderId: "134852128441",
             appId: "1:134852128441:web:b5711605e6ce435f"
         };
+        // Initialize firebase
         firebase.initializeApp(firebaseConfig);
+
+        // Initialize Cloud Firestore through Firebase
+        const db = firebase.firestore();
+
+        // FirebaseUI config.
+        const uiConfig = {
+            signInOptions: [
+                // providers you want to offer your users.
+                {provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+                    requireDisplayName: false},
+                {
+                    provider: firebase.auth.GoogleAuthProvider.PROVIDER_ID
+                    // ,scopes: ['https://www.googleapis.com/auth/contacts.readonly']
+                    ,customParameters: {
+                        // Forces account selection even when one accountis available.
+                        prompt: 'select_account'
+                    }
+                },
+                firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+            ],
+            credentialHelper: 'none',
+            callbacks: {
+                signInSuccessWithAuthResult : (authResult) => {
+                    const currentUser = firebase.auth().currentUser;
+
+                    if (currentUser.displayName === null){ 
+                        currentUser.updateProfile({
+                            displayName: currentUser.email
+                        })
+                    }
+
+                    if (currentUser.photoURL === null){ 
+                        currentUser.updateProfile({
+                            photoURL: "https://xenforo.com/community/data/avatars/m/16/16629.jpg"
+                        })
+                    }
+                    
+                    const dataUser = {
+                        uid     : authResult.user.uid,
+                        email   : authResult.user.email,
+                        nombre  : authResult.user.displayName,
+                        foto    : authResult.user.photoURL,
+                        newUser : authResult.additionalUserInfo.isNewUser
+                    }
+
+                    //console.log(usuario);
+                    db.collection("usuarios").doc(authResult.user.uid).set(dataUser)
+                    return true
+                }
+            },
+            signInSuccessUrl: '#/userHome'
+            // tosUrl and privacyPolicyUrl accept either url string or a callback
+            // function.
+            // Terms of service url/callback.
+            //tosUrl: '<your-tos-url>',
+            // Privacy policy url/callback.
+            /* privacyPolicyUrl: function() {   
+            window.location.assign('<your-privacy-policy-url>');
+            } */
+        };
+
     </script>
 
     <!-- Compiled and minified JavaScript -->
