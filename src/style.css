@@ -119,6 +119,12 @@ h1{
     text-align: center;
 }
 
+.form-background p {
+    font-family: 'Lobster', cursive !important;
+    color: #004d40;
+    font-size: 1.3rem;
+}
+
 .form-inputs {
     width: 40vh;
     height: 5vh;
