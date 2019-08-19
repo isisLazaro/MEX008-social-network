@@ -103,6 +103,11 @@ h1{
     display: none;
 }
 
+.txt-home {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #26a69a;
+}
+
 /* FORM */
 .form-background{
     width: 60vw;
