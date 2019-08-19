@@ -1,9 +1,9 @@
 let UserHome = {
   render : async () => {
     let view =  /*html*/`
-      <div>
+      <div id = "infoUserHome">
         <button id = "logout">Cerrar Sesión</button>
-        <h1>USER HOME</h1>
+        <h1>HOME</h1>
         <p id = "userName"></p>
         <img id = "userPhoto"/>
       </div>
@@ -11,10 +11,11 @@ let UserHome = {
       <!-- Post containers -->
       <div id = "post-card">
         <form id = "post-form">
-          <label for = "post">Escribe algo...</label>
+          <label for = "post" class = "browser-default form-inputs">Escribe algo...</label>
           <input 
             type="text" 
             id = "post-input"
+            class = "browser-default form-inputs"
             autocomplete="off" 
           />
           <input 
